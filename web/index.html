@@ -1,0 +1,122 @@
+<html >
+<head>
+<title>Drug Store</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="iecss.css" />
+<![endif]-->
+
+<script>
+    function Map() {
+        var self = this;
+        
+        this.showMap = function(e) {
+            var button = e.target;
+
+            if (button.dataset.toggle !== 'modal') {
+                return;
+            }
+
+            var modal = self.modal = document.getElementById(button.dataset.target);
+
+            modal.classList.add('in');
+            modal.querySelector('.close').addEventListener('click', self.hideMap);
+
+            e.preventDefault();
+        }
+
+        this.hideMap = function() {
+            self.modal.classList.remove('in');
+            this.removeEventListener('click', self.hideMap);
+        }
+    }
+      
+      document.addEventListener('click', new Map().showMap);
+  </script>
+
+
+</head>
+<body>
+<div id="main_container">
+ 
+  <div id="header">
+  <div class="oferte_content">
+      <div class="oferta">
+        
+    </div>
+    <!-- end of oferte_content-->
+  </div>
+  </div>
+  <div id="main_content">
+    <div id="menu_tab">
+      <div class="left_menu_corner"></div>
+      <ul class="menu">
+        <li><a href="index.html" class="nav1">Ana səhifə</a></li>
+        <li class="divider"></li>
+        <li><a href="#" onclick="loadDoc('about_us.html');return false;" class="nav2">Bizim haqqımızda</a></li>
+        <li class="divider"></li>
+         <li><a href="#" onclick="loadDoc('products.html');return false;" class="nav3">Məhsullar</a></li>
+        <li class="divider"></li>
+        <li><a href="#" onclick="loadDoc('my_account.html');return false;" class="nav4">Mənim hesabım</a></li>
+        <li class="divider"></li>
+       <li><a href="#" onclick="loadDoc('contact.jsp');return false;" class="nav5">Bizimlə əlaqə</a></li> 
+      </ul>
+      
+      <div class="right_menu_corner"></div>
+    </div>
+    <!-- end of menu tab -->
+    <div class="left_content">
+      <div class="title_box">Apteklər</div>
+      <ul class="left_menu">
+        <li class="odd"><a href="#" onclick="loadDoc('Binagadi.jsp');return false;">Binəqədi rayonu</a></li>
+        <li class="even"><a href="#" onclick="loadDoc('CategoryServlet');return false;">Nizami rayonu</a></li>
+        <li class="odd"><a href="#" onclick="loadDoc('Narimanov.jsp');return false;">Nərimanov rayonu</a></li>
+        <li class="even"><a href="#" onclick="loadDoc('Nasimi.jsp');return false;">Nəsimi rayonu</a></li>
+        <li class="odd"><a href="#" onclick="loadDoc('Pirallahi.jsp');return false;">Pirallahı rayonu</a></li>
+        <li class="even"><a href="#" onclick="loadDoc('Qaradagh.jsp');return false;">Qaradağ rayonu</a></li>
+        <li class="odd"><a href="#" onclick="loadDoc('Sabunchu.jsp');return false;">Sabunçu rayonu</a></li>
+        <li class="even"><a href="#" onclick="loadDoc('Surakhani.jsp');return false;">Suraxanı rayonu</a></li>
+        <li class="odd"><a href="#" onclick="loadDoc('Sabail.jsp');return false;">Səbail rayonu</a></li>
+        <li class="even"><a href="#" onclick="loadDoc('Xatai.jsp');return false;">Xətai rayonu</a></li>
+        <li class="odd"><a href="#" onclick="loadDoc('Khazar.jsp');return false;">Xəzər rayonu</a></li>
+        <li class="even"><a href="#" onclick="loadDoc('Yasamal.jsp');return false;">Yasamal rayonu</a></li>
+             </ul>
+      <br><br>
+      <img src="images/bg6.jpg" alt="" border="0" width="196px" height="120px" />
+      </br></br>
+            
+            </div>
+    <!-- end of left content -->
+    <div class="center_content" id="demo">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.1623731650657!2d49.869346314752335!3d40.38309376560964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d1be5ba9625%3A0x2663111d4afd6e2b!2sDemirchi+Tower!5e0!3m2!1sen!2s!4v1464875561756"
+              width="790" height="491" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+         <script>
+function loadDoc(url) {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+</script>
+    <!-- end of center content -->
+
+    <!-- end of right content -->
+  </div>
+  <!-- end of main content -->
+  <div class="footer">
+    <div class="left_footer"> <img src="images/pharmacy.png" alt="" width="49" height="49"/> </div>
+    <div class="center_footer"> All Rights Reserved 2016 by TECH-TECH KHANIM<br />
+     </div>
+  </div>
+</div>
+   
+<!-- end of main_container -->
+
+</body>
+</html>
